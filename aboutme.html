@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>My Personal Website</h1>
+    <nav>
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('about')">About Me</button>
+        <button onclick="showSection('interests')">My Interests</button>
+        <button onclick="showSection('pizza')">Star Pizza</button>
+    </nav>
+</header>
+
+<!-- Sections -->
+<section id="home">
+    <h2>Welcome!</h2>
+    <p>Hello! Welcome to my personal website. Here you can learn more about me and my hobbies.</p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hi my name is Waji. I’m a software engineering student and I love learning web development!</p>
+</section>
+
+<section id="interests">
+    <h2>My Interests</h2>
+    <ul>
+        <li>Programming and web development</li>
+        <li>Reading and learning new skills</li>
+        <li>Music and art</li>
+    </ul>
+</section>
+
+<section id="pizza">
+    <h2>Star Pizza</h2>
+    <img src="margherita-big.jpg" alt="Star Pizza">
+    <p>At Star Pizza we use only quality ingredients and prepare the food under hygienic conditions.</p>
+
+    <h3>Dear Customer!</h3>
+    <p>We can deliver food for your lunch break if you order at least 2 hours before delivery.</p>
+    <p>Free delivery every day when buying for at least kr. 110,-.</p>
+
+    <h3>Pizzas</h3>
+    <ol>
+        <li>Margarita (Tomato, Cheese)</li>
+        <li>Hawaii (Tomato, Cheese, Ham, Pineapple)</li>
+        <li>Milano (Tomato, Cheese, Ham, Mushrooms)</li>
+        <li>Mamma Mia (Tomato, Cheese, Ham, Pepperoni, Onions)</li>
+        <li>Pepperoni (Tomato, Cheese, Pepperoni, Pineapple)</li>
+    </ol>
+
+    <h3>Special Offers</h3>
+    <ul>
+        <li>Buy 2 family or 4 standard pizzas and get one 1½ liter Cola FREE.</li>
+        <li>Buy 2 pizzas and get one serving of tzatziki FREE on pick-up.</li>
+    </ul>
+
+    <h3>Opening Hours</h3>
+    <p>
+        Monday, Tuesday: 15.00 - 22.00<br>
+        Wednesday: 15.00 - 22.00<br>
+        Thursday, Friday: 15.00 - 22.00<br>
+        Saturday, Sunday: 13.00 - 22.00
+    </p>
+</section>
+
+<footer>
+    <p>© 2025 My Personal Website</p>
+</footer>
+
+<script>
+    // Hide all sections except Home by default
+    const sections = document.querySelectorAll('section');
+    sections.forEach((sec) => sec.style.display = 'none');
+    document.getElementById('home').style.display = 'block';
+
+    function showSection(sectionId) {
+        sections.forEach(sec => sec.style.display = 'none'); // hide all
+        document.getElementById(sectionId).style.display = 'block'; // show clicked
+    }
+</script>
+
+</body>
+</html>
